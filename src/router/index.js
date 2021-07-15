@@ -22,15 +22,18 @@ export default new VueRouter({
         },
         {
             path:'/home',
-            component:Home
+            component:Home,
+            name:'home'
         },
         {
-            path:'/search/:keyword',
-            component:Search
+            path:'/search/:keyword?',
+            component:Search,
+            name:'search'
         },
         {
             path:'/login',
             component:Login,
+            name:'login',
             //路由当中的元配置项，可以配置我们所需要的任何数据
             meta:{
                 isHidden:true
@@ -39,6 +42,7 @@ export default new VueRouter({
         {
             path:'/register',
             component:Register,
+            name:'register',
             meta:{
                 isHidden: true
             }

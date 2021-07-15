@@ -44,25 +44,34 @@
 
 export default {
   name: 'App',
-  data(){
-    return{
-      keyword:''
+  data() {
+    return {
+      keyword: ''
     }
   },
-  methods:{
-    toSearch(){
-      this.$router.push('/search/'+this.keyword+'?keyword1='+this.keyword.toUpperCase())
-/*
-  一、路由传参的种类
-      *params和query
-        params参数是属于路径的一部分，路由当中匹配的时候，是要照顾到
-        query参数是在路径后面，以？分割，？后面的a=b&c=d就是query参数
-        query参数不属于路径的一部分，路由匹配的时候，不需要关系这个参数
+  methods: {
+    toSearch() {
+      this.$router.push('/search/' + this.keyword + '?keyword1=' + this.keyword.toUpperCase())
+      /*
+        一、路由传参的种类
+            *params和query
+              params参数是属于路径的一部分，路由当中匹配的时候，是要照顾到
+              query参数是在路径后面，以？分割，？后面的a=b&c=d就是query参数
+              query参数不属于路径的一部分，路由匹配的时候，不需要关系这个参数
 
-    */
+          */
 
       //二、路由路径带参数的三种写法
-        //1.字符串写法
+      //1.字符串写法
+      //   this.$router.push('/search/' + this.keyword + '?keyword1=' + this.keyword.toUpperCase())
+      //2.模板字符串
+      //   this.$router.push(`/search/${this.keyword}?keyword1=${this.keyword.toUpperCase()}`)
+      //3.对象写法(重点)
+/*      this.$router.push({
+        name:'search',
+        params:{keyword:this.keyword},
+        query:{keyword1:this.keyword.toUpperCase()}
+      })*/
     }
   }
 }
