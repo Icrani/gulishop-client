@@ -51,7 +51,7 @@ export default {
   },
   methods:{
     toSearch(){
-      this.$router.push('/search'+this.keyword+'?keyword1='+this.keyword.toUpperCase())
+      this.$router.push('/search/'+this.keyword+'?keyword1='+this.keyword.toUpperCase())
 /*
   一、路由传参的种类
       *params和query
