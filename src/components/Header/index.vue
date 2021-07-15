@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     toSearch() {
-      this.$router.push('/search/' + this.keyword + '?keyword1=' + this.keyword.toUpperCase())
+      // this.$router.push('/search/' + this.keyword + '?keyword1=' + this.keyword.toUpperCase())
       /*
         一、路由传参的种类
             *params和query
@@ -67,11 +67,45 @@ export default {
       //2.模板字符串
       //   this.$router.push(`/search/${this.keyword}?keyword1=${this.keyword.toUpperCase()}`)
       //3.对象写法(重点)
-/*      this.$router.push({
-        name:'search',
-        params:{keyword:this.keyword},
-        query:{keyword1:this.keyword.toUpperCase()}
-      })*/
+      this.$router.push({
+        name: 'search',
+        params: {keyword: this.keyword || undefined},
+        query: {keyword1: this.keyword.toUpperCase()}
+      })
+
+
+      //面试1：
+      //指定params参数是可不可以用path和params配置的组合？（对象写法）
+      //* 不可以用path和params配置组合，只能用name和params配置的组合，query配置可以与path或name进行组合使用
+      //如果传递的参数只有query参数，没有params参数，那么我们可以不用name，可以使用path
+      //注：如果传递的参数包含了params，就不能使用path，只能使用name去使用
+      /*        this.$router.push({
+                path:'/search',
+                query:{keyword1:this.keyword.toUpperCase()}
+              })*/
+
+
+      //面试2：
+      //如何让params参数可传可不传？
+      //* path:'/search/:keyword?'
+      //后期在工作中在path路径后面加“?”用的会比较多
+
+
+      //面试3：
+      //如果指定name与params配置，但params中数据是一个""，无法跳转，路径会出问题
+      //* 1.不传params参数
+      //* 2.首先在params参数可传可不传的前提下,当传递的参数是空串的时候，传递成undefined，就不出问题
+      /*      this.$router.push({
+              name:'search',
+              params:{keyword:'' || undefined},
+              query:{keyword1:this.keyword.toUpperCase()}
+            })*/
+
+      //面试4：
+      //路由组件能不能传递props数据？
+        //* 可以：可以将query或params参数映射/转换成props传递给路由组件对象
+      /* props:(route)=>({keyword1:route.params.keyword,keyword2:route.query.keyword})*/
+
     }
   }
 }

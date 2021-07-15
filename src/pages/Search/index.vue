@@ -2,9 +2,9 @@
   <div>
     Search
     <br>
-    params:{{ $route.params.keyword }}
+    params:{{ $route.params.keyword }} —————————— {{keyword}}
     <br>
-    query:{{ $route.query.keyword1 }}
+    query:{{ $route.query.keyword1 }} —————————— {{keyword1}}
     <br>
   </div>
 
@@ -14,7 +14,8 @@
 <script>
 
 export default {
-  name: 'Search'
+  name: 'Search',
+  props:['keyword']
 
 
 }
