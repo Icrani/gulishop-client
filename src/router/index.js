@@ -2,20 +2,30 @@ import Vue from 'vue'
 import VueRouter from "vue-router";
 Vue.use(VueRouter)
 
+// const VueRouterPush = VueRouter.prototype.push
+// VueRouter.prototype.push = function push (to) {
+//     return VueRouterPush.call(this, to).catch(err => err)
+// }
+
+
 //向外暴露一个路由器对象
 import Home from '@/pages/Home'
-import Search from '@/pages/Home'
-import Register from '@/pages/Home'
-import Login from '@/pages/Home'
+import Search from '@/pages/Search'
+import Register from '@/pages/Register'
+import Login from '@/pages/Login'
 
 export default new VueRouter({
     routes:[
+        {   //重定向路由
+            path:'/',
+            redirect:'/home'
+        },
         {
             path:'/home',
             component:Home
         },
         {
-            path:'/search',
+            path:'/search/:keyword',
             component:Search
         },
         {
@@ -33,9 +43,6 @@ export default new VueRouter({
                 isHidden: true
             }
         },
-        {   //重定向路由
-            path:'/',
-            redirect:'/home'
-        }
+
     ]
 })

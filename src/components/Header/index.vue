@@ -8,7 +8,7 @@
           <p>
             <span>请</span>
             <router-link to="/login">登录</router-link>
-            <router-link to="/reg" class="register">免费注册</router-link>
+            <router-link to="/register" class="register">免费注册</router-link>
           </p>
         </div>
         <div class="typeList">
@@ -46,17 +46,18 @@ export default {
   name: 'App',
   data(){
     return{
-      keyWord:''
+      keyword:''
     }
   },
   methods:{
     toSearch(){
-      this.$router.push('/search')
+      this.$router.push('/search'+this.keyword+'?keyword1='+this.keyword.toUpperCase())
 /*
   一、路由传参的种类
       *params和query
         params参数是属于路径的一部分，路由当中匹配的时候，是要照顾到
-
+        query参数是在路径后面，以？分割，？后面的a=b&c=d就是query参数
+        query参数不属于路径的一部分，路由匹配的时候，不需要关系这个参数
 
     */
 

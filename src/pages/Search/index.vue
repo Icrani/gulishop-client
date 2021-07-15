@@ -1,11 +1,21 @@
 <template>
-  <div>Search</div>
+  <div>
+    Search
+    params:{{ $route.params.keyword }}
+    <br>
+    query:{{ $route.query.keyword1 }}
+    <br>
+  </div>
+
+
 </template>
 
 <script>
 
 export default {
-  name: 'App',
+  name: 'Search'
+
+
 }
 </script>
 
