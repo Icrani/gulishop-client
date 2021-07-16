@@ -13,9 +13,10 @@ Vue.use(VueRouter)
 //将原有的push方法，保存起来，后期还能拿到原来的
 const VueRouterPush = VueRouter.prototype.push
 //可以打单的去修改原型的push，让原来的push指向另一个函数
-// VueRouter.prototype.push = function push (to) {
-//     return VueRouterPush.call(this, to).catch(err => err)
-// }
+/*VueRouter.prototype.push = function push (to) {
+    return VueRouterPush.call(this, to).catch(err => err)
+}*/
+//下面是完整的写法
 VueRouter.prototype.push = function(location,onResolved,onRejected){
     if (onResolved === undefined && onRejected === undefined){
         return VueRouterPush.call(this,location).catch(()=>{})

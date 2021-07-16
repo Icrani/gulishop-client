@@ -1,14 +1,7 @@
 <template>
   <div>
-    Search
-    <br>
-    params:{{ $route.params.keyword }} —————————— {{keyword}}
-    <br>
-    query:{{ $route.query.keyword1 }} —————————— {{keyword1}}
-    <br>
+    <TypeNav></TypeNav>
   </div>
-
-
 </template>
 
 <script>
