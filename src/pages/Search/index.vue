@@ -15,7 +15,7 @@
 
 export default {
   name: 'Search',
-  props:['keyword']
+  props:['keyword','keyword1']
 
 
 }
