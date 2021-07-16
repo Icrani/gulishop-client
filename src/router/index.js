@@ -3,10 +3,27 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter)
 
-// const VueRouterPush = VueRouter.prototype.push
+//VueRouter 是路由器对象的构造函数
+//this.$router.push 调用的是路由器对象的方法，这个方法并不是路由器实例化对象的方法，而是这个对象原型的方法
+//这个实例化对象原型的方法，就是VueRouter的显式原型的方法
+//this.$router是实例化对象  是VueRouter的实例化对象
+
+
+//解决编程式导航多次点击参数不修改抛出一个失败的promise
+//将原有的push方法，保存起来，后期还能拿到原来的
+const VueRouterPush = VueRouter.prototype.push
+//可以打单的去修改原型的push，让原来的push指向另一个函数
 // VueRouter.prototype.push = function push (to) {
 //     return VueRouterPush.call(this, to).catch(err => err)
 // }
+VueRouter.prototype.push = function(location,onResolved,onRejected){
+    if (onResolved === undefined && onRejected === undefined){
+        return VueRouterPush.call(this,location).catch(()=>{})
+    }else {
+        //证明调用的时候传递了成功或者失败的回调，或者都有
+        return VueRouterPush.call(this,location,onResolved,onRejected)
+    }
+}
 
 
 //向外暴露一个路由器对象

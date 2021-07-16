@@ -71,7 +71,10 @@ export default {
         name: 'search',
         params: {keyword: this.keyword || undefined},
         query: {keyword1: this.keyword.toUpperCase()}
-      })
+      },)
+
+
+
 
 
       //面试1：
@@ -106,6 +109,18 @@ export default {
         //* 可以：可以将query或params参数映射/转换成props传递给路由组件对象
       /* props:(route)=>({keyword1:route.params.keyword,keyword2:route.query.keyword})*/
 
+      //面试：
+      //vue-router使用的是3.1.0以上的版本，如果多次点击使用编程式导航，二参数没发生变化，会报NavigationDuplicated的警告错误
+
+        //* 1.但是不是太好
+          /* 注：这是处理编程式导航多次点击参数不修改抛出一个失败的promise，但是每一次都需要写catch，所以考虑可以写到push原型上。建议写到router下index.js中使整个项目都能调用
+           this.$router.push({
+             name: 'search',
+             params: {keyword: this.keyword || undefined},
+             query: {keyword1: this.keyword.toUpperCase()}
+           },).catch(()=>{})*/
+        //* 2.
+
     }
   }
 }
@@ -127,8 +142,7 @@ export default {
         float: left;
 
         p {
-          float: left;
-          margin-right: 10px;
+          float: left;          margin-right: 10px;
 
           .register {
             border-left: 1px solid #b3aeae;
