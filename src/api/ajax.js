@@ -41,7 +41,8 @@ service.interceptors.request.use(function (config) {
     return Promise.reject(error);
 });
 */
-//请求拦截器一般情况写法
+
+//请求拦截器一般情况写法,每一个ajax请求都要经过这个拦截器去拦截
 service.interceptors.request.use(
     (config) => {
         //config其实就是我们的请求报文
