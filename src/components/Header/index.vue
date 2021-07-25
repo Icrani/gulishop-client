@@ -43,7 +43,7 @@
 <script>
 
 export default {
-  name: 'App',
+  name: 'Header',
   data() {
     return {
       keyword: ''
