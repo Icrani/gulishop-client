@@ -18,7 +18,8 @@ timeout: 当ajax请求超过设置的这个时间就会跑错
 import axios from "axios";
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-//以后只要是对axios二次封装，不会再axios身上直接去封装，而是创建一个新的axios实例进行封装
+
+//以后只要是对axios二次封装，不会再axios身上直接去封装，而是创建一个新的axios实例[service]进行封装
 //axios.create()创建一个新的和axios具有相同功能的一个实例
 const service = axios.create({
     //配置基础路径和超时限制
