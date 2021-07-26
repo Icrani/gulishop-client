@@ -10,6 +10,7 @@
 /*函数用法
 axios({
     url:'',
+
     method:,
     params：{
     //代表的是query参数
@@ -19,17 +20,25 @@ axios({
     //配置的是请求体参数
     }
 })*/
+//对象用法
+/*
+axios.get('')
+*/
 
 import request from './ajax'
 
 //请求三级分类列表数据
 // /api/product/getBaseCategoryList
 // get
+// 无参
 
-
-export const reqCategoryList = () =>{
+export const reqCategoryList = () => {
 
     return request({
-        url:''
+        url: '/v2/get/product/getBaseCategoryList',
+        method:'get',
     })
 }
+
+//验证请求是否成功
+// reqCategoryList()   //这里如果要调用，得把模块引入到main文件中

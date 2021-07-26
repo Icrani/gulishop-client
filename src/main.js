@@ -4,7 +4,11 @@ import router from '@/router'
 // @是一个别名，代表的就是src的路径
 import TypeNav from '@/components/TypeNav'
 
+// import '@/api'
 
+//第二种测试接口方式
+/*import {reqCategoryList} from "@/api";
+reqCategoryList()*/
 
 //全局注册的组件，如果一个非路由组件被多个组件使用，那么定义在components中，注册在全局main.js中
 Vue.component('TypeNav',TypeNav)

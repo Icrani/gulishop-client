@@ -24,7 +24,7 @@ import 'nprogress/nprogress.css'
 const service = axios.create({
     //配置基础路径和超时限制
     baseURL: '/api',
-    timeout: 20000,
+    timeout: 200000,
 });
 
 //添加进度条信息  nprogress
