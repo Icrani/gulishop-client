@@ -1692,8 +1692,30 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   name: "TypeNav",
+  //组件在挂载完成的时候，就立马发请求获取数据，存储到vuex中，而不是直接在vue组件里面
+  mounted() {
+    //dispatch是分发和触发的意思，和emit单词意思一样
+    //本质其实就是在调用指定的action函数
+    this.$store.dispatch('getCategoryList')
+  },
+
+  //从vuex当中把数据捞到vue组件当中使用
+  //以后只要从vuex拿的是数据(state和getters当中的东西)，都在computed当中拿，
+  //以后只要从vuex拿的是方法(mutations和actions当中的东西)，都在methods当中拿，一般用的很少
+  computed:{
+    //函数内部可以是数组，也可以是对象
+    //是数组必须要满足条件:
+    // 1、数据直接就是总的state当中的数据，不能是模块里面的
+    // 2、数组当中的模子必须和state当中的名字一致
+    ...mapState({
+      //必须使用对象，而且返回的是state.home.categoryList
+      categoryList:state => state.home.categoryList
+    })
+  }
 }
 </script>
 
