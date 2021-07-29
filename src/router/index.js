@@ -18,7 +18,11 @@ const VueRouterPush = VueRouter.prototype.push
 }*/
 //下面是完整的写法
 VueRouter.prototype.push = function(location,onResolved,onRejected){
+    //location就是我们调用的this.$router.push,传过来的对象
+    //onResolved是成功的回调函数
+    //onRejected是失败的回调函数
     if (onResolved === undefined && onRejected === undefined){
+        //如果成功的回调和失败的回调都没有传值，则调用原来的push方法，因为是promise语法，所以后面使用catch来处理异常
         return VueRouterPush.call(this,location).catch(()=>{})
     }else {
         //证明调用的时候传递了成功或者失败的回调，或者都有
