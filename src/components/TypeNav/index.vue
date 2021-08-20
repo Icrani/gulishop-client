@@ -11,7 +11,8 @@
                 <!--                <a href="">{{ c1.categoryName }}</a>-->
 
 
-                <!--              第一种写法：所有的a标签换成router-link，会卡，因为组件标签太多了，导致内存当中的组件对象太多，效率太低  -->
+                <!--
+                第一种写法：所有的a标签换成router-link，会卡，因为组件标签太多了，导致内存当中的组件对象太多，效率太低  -->
                 <!--                <router-link :to="{
                                   name:'search',
                                   query:{
@@ -23,8 +24,9 @@
                                 </router-link>-->
 
 
-                <!--                把声明式导航改为编程式导航-->
-                <a href="javascript:" @click="$router.push({
+                <!--
+                把声明式导航改为编程式导航,click时间，点击之后，是需要调用函数的，同样每个a标签都添加了点击事件，那么内存中就会定义很多函数，内存占用也是比较大的，效率虽然比声明式导航强，但是还是不够好-->
+<!--                <a href="javascript:" @click="$router.push({
                     name:'search',
                     query:{
                       category1Id:c1.categoryId,
@@ -32,8 +34,10 @@
                     }
                 })">
                   {{ c1.categoryName }}
-                </a>
+                </a>-->
 
+
+<!--                事件委派-->
 
               </h3>
               <div class="item-list clearfix">
