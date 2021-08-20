@@ -1,7 +1,33 @@
 <template>
   <div class="type-nav">
     <div class="container">
-      <h2 class="all">全部商品分类</h2>
+      <div @mouseleave="currentIndex=-1">
+        <h2 class="all">全部商品分类</h2>
+        <div class="sort">
+          <div class="all-sort-list2">
+            <div class="item" :class="{item_on:currentIndex === index}" v-for="(c1,index) in categoryList"
+                 :key="c1.categoryId" @mouseenter="moveInItem(index)">
+              <h3>
+                <a href="">{{ c1.categoryName }}</a>
+              </h3>
+              <div class="item-list clearfix">
+                <div class="subitem">
+                  <dl class="fore" v-for="(c2,index) in c1.categoryChild" :key="c2.categoryId">
+                    <dt>
+                      <a href="">{{ c2.categoryName }}</a>
+                    </dt>
+                    <dd>
+                      <em v-for="(c3,index) in c2.categoryChild" :key="c3.categoryId">
+                        <a href="">{{ c3.categoryName }}</a>
+                      </em>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav class="nav">
         <a href="###">服装城</a>
         <a href="###">美妆馆</a>
@@ -12,56 +38,61 @@
         <a href="###">有趣</a>
         <a href="###">秒杀</a>
       </nav>
-      <div class="sort">
-        <div class="all-sort-list2">
-          <div class="item" v-for="(c1,index) in categoryList" :key="c1.categoryId">
-            <h3>
-              <a href="">{{c1.categoryName}}</a>
-            </h3>
-            <div class="item-list clearfix">
-              <div class="subitem">
-                <dl class="fore" v-for="(c2,index) in c1.categoryChild" :key="c2.categoryId">
-                  <dt>
-                    <a href="">{{c2.categoryName}}</a>
-                  </dt>
-                  <dd>
-                    <em v-for="(c3,index) in c2.categoryChild" :key="c3.categoryId">
-                      <a href="">{{ c3.categoryName }}</a>
-                    </em>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import {mapState} from "vuex";
+import { mapGetters,mapState} from "vuex"
+// import _ from 'lodash' //这样引入会把整个lodash全部引入，打包后体积过大
+import throttle from 'lodash/throttle'
 
 export default {
   name: "TypeNav",
+  data() {
+    return {
+      currentIndex: -1
+    }
+  },
   //组件在挂载完成的时候，就立马发请求获取数据，存储到vuex中，而不是直接在vue组件里面
   mounted() {
     //dispatch是分发和触发的意思，和emit单词意思一样
     //本质其实就是在调用指定的action函数
     this.$store.dispatch('getCategoryList')
   },
+  methods:{
+
+    //var throttled = _.throttle(renewToken, 300000, { 'trailing': false,'leading':true });
+    //默认trailing是true,所以一般的时候leading都不动，一般都是更改trailing
+    //trailing:是否在时间间隔之后执行函数
+    //leading:是否在时间间隔之前执行函数
+
+
+    //没节流的时候
+    // moveInItem(index){
+    //   this.currentIndex = index
+    //   console.log(index)
+    // }
+
+
+    //节流后，传递的函数不能使用箭头函数，因为箭头函数内部的this不再是组件对象了
+    moveInItem:throttle(function (index) {
+      this.currentIndex = index
+      console.log(index)
+    },20,{'trailing':false})
+  },
 
   //从vuex当中把数据捞到vue组件当中使用
   //以后只要从vuex拿的是数据(state和getters当中的东西)，都在computed当中拿，
   //以后只要从vuex拿的是方法(mutations和actions当中的东西)，都在methods当中拿，一般用的很少
-  computed:{
+  computed: {
     //函数内部可以是数组，也可以是对象
     //是数组必须要满足条件:
     // 1、数据直接就是总的state当中的数据，不能是模块里面的
     // 2、数组当中的模子必须和state当中的名字一致
     ...mapState({
       //必须使用对象，而且返回的是state.home.categoryList
-      categoryList:state => state.home.categoryList
+      categoryList: state => state.home.categoryList
     })
   }
 }
@@ -177,8 +208,9 @@ export default {
             }
           }
 
-          &:hover {
+          &.item_on {
             background-color: #b3aeae;
+
             .item-list {
               display: block;
             }

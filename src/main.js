@@ -12,7 +12,7 @@ import store from '@/store'
 reqCategoryList()*/
 
 //全局注册的组件，如果一个非路由组件被多个组件使用，那么定义在components中，注册在全局main.js中
-Vue.component('TypeNav',TypeNav)
+Vue.component('TypeNav',TypeNav);
 
 
 Vue.config.productionTip = false
