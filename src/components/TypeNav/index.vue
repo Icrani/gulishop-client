@@ -8,17 +8,61 @@
             <div class="item" :class="{item_on:currentIndex === index}" v-for="(c1,index) in categoryList"
                  :key="c1.categoryId" @mouseenter="moveInItem(index)">
               <h3>
-                <a href="">{{ c1.categoryName }}</a>
+                <!--                <a href="">{{ c1.categoryName }}</a>-->
+
+
+                <!--              第一种写法：所有的a标签换成router-link，会卡，因为组件标签太多了，导致内存当中的组件对象太多，效率太低  -->
+                <!--                <router-link :to="{
+                                  name:'search',
+                                  query:{
+                                    category1Id:c1.categoryId,
+                                    categoryName:c1.categoryName
+                                  }
+                                }">
+                                  {{ c1.categoryName }}
+                                </router-link>-->
+
+
+                <!--                把声明式导航改为编程式导航-->
+                <a href="javascript:" @click="$router.push({
+                    name:'search',
+                    query:{
+                      category1Id:c1.categoryId,
+                      categoryName:c1.categoryName
+                    }
+                })">
+                  {{ c1.categoryName }}
+                </a>
+
+
               </h3>
               <div class="item-list clearfix">
                 <div class="subitem">
                   <dl class="fore" v-for="(c2,index) in c1.categoryChild" :key="c2.categoryId">
                     <dt>
-                      <a href="">{{ c2.categoryName }}</a>
+                      <!--                      <a href="">{{ c2.categoryName }}</a>-->
+                      <a href="javascript:" @click="$router.push({
+                    name:'search',
+                    query:{
+                      category2Id:c2.categoryId,
+                      categoryName:c2.categoryName
+                    }
+                })">
+                        {{ c2.categoryName }}
+                      </a>
                     </dt>
                     <dd>
                       <em v-for="(c3,index) in c2.categoryChild" :key="c3.categoryId">
-                        <a href="">{{ c3.categoryName }}</a>
+                        <!--                        <a href="">{{ c3.categoryName }}</a>-->
+                        <a href="javascript:" @click="$router.push({
+                    name:'search',
+                    query:{
+                      category3Id:c3.categoryId,
+                      categoryName:c3.categoryName
+                    }
+                })">
+                          {{ c3.categoryName }}
+                        </a>
                       </em>
                     </dd>
                   </dl>
@@ -43,7 +87,7 @@
 </template>
 
 <script>
-import { mapGetters,mapState} from "vuex"
+import {mapGetters, mapState} from "vuex"
 // import _ from 'lodash' //这样引入会把整个lodash全部引入，打包后体积过大
 import throttle from 'lodash/throttle'
 
@@ -60,7 +104,7 @@ export default {
     //本质其实就是在调用指定的action函数
     this.$store.dispatch('getCategoryList')
   },
-  methods:{
+  methods: {
 
     //var throttled = _.throttle(renewToken, 300000, { 'trailing': false,'leading':true });
     //默认trailing是true,所以一般的时候leading都不动，一般都是更改trailing
@@ -76,10 +120,10 @@ export default {
 
 
     //节流后，传递的函数不能使用箭头函数，因为箭头函数内部的this不再是组件对象了
-    moveInItem:throttle(function (index) {
+    moveInItem: throttle(function (index) {
       this.currentIndex = index
       console.log(index)
-    },20,{'trailing':false})
+    }, 20, {'trailing': false})
   },
 
   //从vuex当中把数据捞到vue组件当中使用
