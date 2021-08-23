@@ -23,7 +23,7 @@ import 'nprogress/nprogress.css'
 //axios.create()创建一个新的和axios具有相同功能的一个实例
 const service = axios.create({
     //配置基础路径和超时限制
-    baseURL: '/api',
+    // baseURL: '/api',
     timeout: 200000,
 });
 

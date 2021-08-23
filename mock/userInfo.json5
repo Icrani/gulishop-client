@@ -1,9 +1,1157 @@
 {
-  id: '@id()',
-  username: '@cname()',
-  date: '@date()',
-  avatar: "@image('200x200','red'.'#fff','avatar')",
-  description: "@paragraph()",
-  ip: "@ip()",
-  email: "@email()"
+  code: 200,
+  message: "成功",
+  data: [
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "图书、音像、电子书刊",
+      categoryId: 1
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "手机",
+      categoryId: 2
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "家用电器",
+      categoryId: 3
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "数码",
+      categoryId: 4
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "家居家装",
+      categoryId: 5
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "电脑办公",
+      categoryId: 6
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "厨具",
+      categoryId: 7
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "个护化妆",
+      categoryId: 8
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "服装内衣",
+      categoryId: 9
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "钟表",
+      categoryId: 10
+    },
+    {
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "鞋靴",
+      categoryId: 11
+    },{
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "母婴",
+      categoryId: 12
+    },{
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "礼品箱包",
+      categoryId: 13
+    },{
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "食品饮料、保健食品",
+      categoryId: 14
+    },{
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "珠宝",
+      categoryId: 15
+    },{
+      categoryChild: [
+        {
+          categoryName: "电子书刊",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "电子书"
+            },
+            {
+              categoryId: 2,
+              categoryName: "网络原创"
+            },
+            {
+              categoryId: 3,
+              categoryName: "数字杂志"
+            }
+          ]
+        },
+        {
+          categoryName: "音像",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "音乐"
+            },
+            {
+              categoryId: 2,
+              categoryName: "影视"
+            },
+            {
+              categoryId: 3,
+              categoryName: "教育音像"
+            }
+          ]
+        },
+        {
+          categoryName: "文艺",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "小说"
+            },
+            {
+              categoryId: 2,
+              categoryName: "文学"
+            },
+            {
+              categoryId: 3,
+              categoryName: "青春文学"
+            },
+            {
+              categoryId: 4,
+              categoryName: "传记"
+            },
+            {
+              categoryId: 5,
+              categoryName: "艺术"
+            }
+          ]
+        }
+      ],
+      categoryName: "汽车用品",
+      categoryId: 16
+    },{
+      categoryChild: [
+        {
+          categoryName: "健身训练",
+          categoryId: 1,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "综合训练器"
+            },
+            {
+              categoryId: 2,
+              categoryName: "哑铃"
+            },
+            {
+              categoryId: 3,
+              categoryName: "踏步机"
+            }
+          ]
+        },
+        {
+          categoryName: "体育用品",
+          categoryId: 2,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "羽毛球"
+            },
+            {
+              categoryId: 2,
+              categoryName: "乒乓球"
+            },
+            {
+              categoryId: 3,
+              categoryName: "篮球"
+            }
+          ]
+        },
+        {
+          categoryName: "运动鞋包",
+          categoryId: 3,
+          categoryChild: [
+            {
+              categoryId: 1,
+              categoryName: "跑步鞋"
+            },
+            {
+              categoryId: 2,
+              categoryName: "休闲鞋"
+            },
+            {
+              categoryId: 3,
+              categoryName: "篮球鞋"
+            },
+            {
+              categoryId: 4,
+              categoryName: "板鞋"
+            },
+            {
+              categoryId: 5,
+              categoryName: "足球鞋"
+            }
+          ]
+        }
+      ],
+      categoryName: "运动健康",
+      categoryId: 17
+    }
+  ],
+  ok: true
 }
