@@ -61,14 +61,14 @@
         </transition>
       </div>
       <nav class="nav">
-        <a href="###">服装城</a>
-        <a href="###">美妆馆</a>
-        <a href="###">尚品汇超市</a>
-        <a href="###">全球购</a>
-        <a href="###">闪购</a>
-        <a href="###">团购</a>
-        <a href="###">有趣</a>
-        <a href="###">秒杀</a>
+        <a href="#">服装城</a>
+        <a href="#">美妆馆</a>
+        <a href="#">尚品汇超市</a>
+        <a href="#">全球购</a>
+        <a href="#">闪购</a>
+        <a href="#">团购</a>
+        <a href="#">有趣</a>
+        <a href="#">秒杀</a>
       </nav>
     </div>
   </div>
@@ -84,7 +84,7 @@ export default {
   data() {
     return {
       currentIndex: -1,
-      isShow:true
+      isShow: true
     }
   },
   //组件在挂载完成的时候，就立马发请求获取数据，存储到vuex中，而不是直接在vue组件里面
@@ -97,7 +97,7 @@ export default {
     //请求会重复发送，而三级分类列表数据是一样的，没必要发那么多次
     // this.$store.dispatch('getCategoryList');
 
-    if (this.$route.path !== '/home'){
+    if (this.$route.path !== '/home') {
       //证明这个组件是在search里面的，需要一上来就隐藏sort
       this.isShow = false
     }
@@ -129,16 +129,50 @@ export default {
       let targetNode = event.target //获取我们的目标元素(真正发生事件的元素   )
 
       let data = targetNode.dataset //获取当前目标元素身上data-属性 组成的对象
-      console.log(data)
+      // console.log(data)
+      //如果点击的是a标签，那么data一定是有categoryname的
+      //如果不是a标签，那么data就没有categoryname的
+      let {category1id, category2id, category3id, categoryname} = data
+
+      if (categoryname) {
+        //categoryname存在，证明点击的就是a标签
+        let location = {
+          name: 'search'
+        }
+        let query = {
+          categoryName: categoryname
+        }
+        if (category1id) {
+          query.category1Id = category1id
+        } else if (category2id) {
+          query.category2Id = category2id
+        } else if (category3id) {
+          query.category3Id = category3id
+        }
+
+        //找到所有的query参数以后，最后吧query放到location中
+        location.query = query
+
+        //最后吧location对象构造好了，跳转
+
+        this.$router.push(location)
+      }
+
+      //参数怎么携带，要携带哪些参数
+      //如果点的是a标签，那么参数已经带过来了，就在我们的data当中
+
+      //假设你点击的就是a标签，怎么知道点击的是一级还是二级还是三级
+
+
     },
     //event是事件对象
     //每一次触发事件的时候，系统(浏览器内核)都会把这一次触发事件相关的所有信息，封装成一个对象
     //在浏览器调用回调函数的时候，自动传递给回调函数的第一个形参
 
-    moveOutDiv(){
-      this.currentIndex=-1
+    moveOutDiv() {
+      this.currentIndex = -1
       //溢出外部自己添加的div，得去判断是在home页面溢出还是在search页面溢出
-      if (this.$route.path !== '/home'){
+      if (this.$route.path !== '/home') {
         this.isShow = false
       }
 
@@ -208,13 +242,15 @@ export default {
         height: 0;
         opacity: 0;
       }
+
       //动画已经结束
-      &.sort-enter-to{
+      &.sort-enter-to {
         height: 461px;
         opacity: 1;
       }
+
       //中间动画过程
-      &.sort-enter-active{
+      &.sort-enter-active {
         transition: all 0.4s;
       }
 
